@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'SansationR';
+    src: url('./Fonts/Sansation-Regular.ttf') format('woff2');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SansationB';
+    src: url('./Fonts/Sansation-Bold.ttf') format('woff2');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LifeHack';
+    src: url('./Fonts/LifehackSans.ttf') format('woff2');
+    font-style: normal;
+}
+
+:root {
+    --Black: #000;
+    --White: #fff;
+    --Concrete: #F2F2F2;
+    --Mercury: #E6E6E6;
+    --Gray: #828282;
+    --Viridian_Green: #64816D;
+    --Tonys_Pink: #E48185;
+    --Wheat: #F5C3AD;
+    --Azalea: #F6B8C4;
+    --Font-small: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
