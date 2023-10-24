@@ -7,15 +7,16 @@ const About = styled.div`
 `
 
 const Cat = styled.div`
-    width: 85vw;
-    height: 90vh;
+    width: 100%;
+    height: 35vw;
+
 `
 
 function AboutDesktop() {
     return(
         <About>
             <div className="container">
-                <Cat style={{backgroundImage: `url(${AboutCat})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", marginRight: "3vw"}}>
+                <Cat style={{backgroundImage: `url(${AboutCat})`, backgroundSize: "contain", backgroundPosition:"center", backgroundRepeat: "no-repeat"}}>
 
                 </Cat>
             </div>

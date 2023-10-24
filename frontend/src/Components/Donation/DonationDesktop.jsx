@@ -9,20 +9,20 @@ const Donation = styled.div`
 
 const Rectangle = styled.div`
     max-width: 100vw;
-    height: 50vh;
-    margin-bottom: 4vh;
+    height: 25vw;
+    margin-bottom: 2vw;
 `
 
 const BTNnum = styled.div`
     display: flex;
     justify-content: center;
-    padding-top: 10vh;
+    padding-top: 5vw;
 `
 
 const Button = styled.button`
     border-radius: 20px;
     width: 15vw;
-    height: 5vh;
+    height: 3vw;
     background-color: rgba(0, 0, 0, 0);
     color: var(--White);
     border: 1px solid var(--White);
@@ -36,13 +36,13 @@ const Button = styled.button`
 const INP = styled.div`
     display: flex;
     justify-content: center;
-    padding-top: 5vh;
+    padding-top: 3vw;
 `
 
 const Input = styled.input`
     border-radius: 20px;
     width: 15vw;
-    height: 5vh;
+    height: 3vw;
     background-color: rgba(0, 0, 0, 0);
     color: var(--White);
     border: 1px solid var(--White);
@@ -56,7 +56,8 @@ const Input = styled.input`
 
 const H1 = styled.h1`
     font-family: LifeHack;
-    font-size: 6vh;
+    font-size: 3vw;
+    font-weight: 100;
 `
 
 function DonationDesktop() {
@@ -74,13 +75,13 @@ function DonationDesktop() {
                     <Input type="user" placeholder="Фамилия" style={{marginRight: "20px"}}></Input>
                     <Input type="user" placeholder="Email"></Input>
                 </INP>
-                <div style={{display:"flex", justifyContent: "flex-end", paddingTop: "11.5vh"}}>
+                <div style={{display:"flex", justifyContent: "flex-end", paddingTop: "1.5vw"}}>
                 <Button style={{marginRight: "10vw"}}> Отправить</Button>
                 </div>
             </Rectangle>
                 <div className="container" style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-                <H1 style={{margin: "auto", marginLeft: "0", marginBottom: "4vh"}}>Нужды приюта</H1>
-                <div style={{backgroundImage: `url(${Ghelp})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", width:"45vw", height: "30vh"}}>
+                <H1 style={{margin: "auto", marginLeft: "0", marginBottom: "2vw"}}>Нужды приюта</H1>
+                <div style={{backgroundImage: `url(${Ghelp})`, backgroundSize: "cover", backgroundRepeat: "no-repeat", width:"65vw", height: "20vw"}}>
 
                 </div>
                 </div>

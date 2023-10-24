@@ -16,15 +16,16 @@ const RCTL = styled.div`
 `
 
 const Rectangle = styled.div`
-    width: 28vw;
-    height: 27vh;
+    width: 25vw;
+    height: 12vw;
     border-radius: 9px;
     margin-bottom: 4vh;
 `
 
 const H1 = styled.h1`
     font-family: LifeHack;
-    font-size: 6vh;
+    font-size: 3vw;
+    font-weight: 100;
 `
 
 function TasksDesktop() {

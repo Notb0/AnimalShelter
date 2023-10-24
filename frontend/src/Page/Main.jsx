@@ -5,6 +5,8 @@ import FormApplication from "../Components/FormApplication/FormApplication";
 import Tasks from "../Components/Tasks/Tasks";
 import About from "../Components/About/About";
 import Donation from "../Components/Donation/Donation";
+import Footer from "../Components/Footer/Footer";
+import TakePet from "../Components/TakePet/TakePet";
 
 function Main() {
     const [show, setShow] = useState(false);
@@ -14,8 +16,8 @@ function Main() {
             <Tasks/>
             <About/>
             <Donation/>
-            <FormApplication setShow={setShow} show={show}/>
-            <button onClick={() => setShow(true)}>Отправить заявления на питомца</button>
+            <TakePet/>
+            <Footer/>
         </div>
     )   
 }

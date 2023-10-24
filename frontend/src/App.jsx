@@ -9,7 +9,6 @@ import Main from './Page/Main';
 import Adopt from './Page/Adopt';
 import Help from './Page/Help';
 import Statistic from './Page/Statistics';
-import Contacts from './Page/Contacts';
 
 const router = createBrowserRouter([
   {
@@ -27,10 +26,6 @@ const router = createBrowserRouter([
   {
     path: "Statistics",
     element: <Statistic/>,
-  },
-  {
-    path: "Contacts",
-    element: <Contacts/>,
   },
 ]);
 

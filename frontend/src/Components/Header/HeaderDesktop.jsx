@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {ReactComponent as Logo} from "../../Images/logo.svg";
+import {ReactComponent as Logo} from "../../Images/logoh.svg";
 
 const Header = styled.div`
     display: flex;
@@ -42,7 +42,6 @@ function HeaderDesktop() {
             <Link here={window.location.pathname === "/Adopt"? true : false} href="/Adopt">Взять в семью</Link>
             <Link here={window.location.pathname === "/Help"? true : false} href="/Help">Помочь приюту</Link>
             <Link here={window.location.pathname === "/Statistics"? true : false} href="/Statistics">Статистика</Link>
-            <Link here={window.location.pathname === "/Contacts"? true : false} href="/Contacts">Контакты</Link>
          </Container>
     </Header>
     )
