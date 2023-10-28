@@ -4,14 +4,15 @@ import FormApplicationMobile from "./FormApplicationMobile";
 import { useMediaQuery } from 'react-responsive'
 
 
-function FormApplication({show, setShow}) {
+function FormApplication({show, setShow, petsIdNow}) {
     const isMobile = useMediaQuery({ query: '(max-width: 750px)' });
     const [FullName, setFullName] = useState(); 
     const [DateBirth, setDateBirth] = useState(); 
     const [phone, setPhone] = useState();
     const [address, setAddress] = useState(); 
-    const [petsId, setPetsId] = useState();
+    const [petsId, setPetsId] = useState(1);
     const [PetsList, setPetsList] = useState([]);
+    useEffect(() => {setPetsId(petsIdNow); console.log(petsIdNow)}, [petsIdNow])
 
     useEffect(() => {
         fetch("/pets", {method: "GET"})

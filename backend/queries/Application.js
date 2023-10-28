@@ -14,7 +14,6 @@ const createApplication = (request, response) => {
     pool.query('INSERT INTO public.Users (full_name, date_of_birth, phone_number, address) VALUES ($1, $2, $3, $4) RETURNING id', 
     [full_name, dateBirth,phone,address], (error, results) => {
         if (error) {
-            throw error
         } else{
             pool.query('INSERT INTO public."Application" (user_id, pets_id, date) VALUES ($1, $2, now())', 
             [results.rows[0].id, petsId], (error, results) => {

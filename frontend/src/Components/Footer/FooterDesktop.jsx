@@ -45,7 +45,7 @@ function FooterDesktop() {
                                 <a href="https://katerinakd666@gmail.com"><img src={MAIL} alt="" style={{marginRight:"2vw"}} ></img></a>
                             </div>
                         </div>
-                        <div style={{marginLeft:"5vw"}}>
+                        <div id="Footer" style={{marginLeft:"5vw"}}>
                             <P>Директор: +7 (999) 999-99-99</P>
                             <P>Приём животных в приют: <br/>+7 (921) 666-66-66 
                             <br/>(звонки с 18:00 до 20:00 ежедневно) </P>

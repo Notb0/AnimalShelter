@@ -37,12 +37,10 @@ function BlockHelloDesktop() {
                 <img src={GroupHello} style={{width:"80%"}} />
                 <Btn>
                     <Button onClick={() => window.location.pathname = "Help"}>Помочь приюту</Button>
-                    <Button>О нас</Button>
+                    <Button onClick={() => window.location = "#Footer"}>О нас</Button>
                 </Btn>
             </container>
         </BlockHello>
-        
-       
     )
     
 }

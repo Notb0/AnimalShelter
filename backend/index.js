@@ -10,6 +10,7 @@ const Sponsors = require('./queries/sponsors');
 const Users = require('./queries/users');
 
 global.__basedir = __dirname;
+app.use("/img", express.static(__dirname + '/img'))
 app.use(
   bodyParser.urlencoded({
     extended: true,
