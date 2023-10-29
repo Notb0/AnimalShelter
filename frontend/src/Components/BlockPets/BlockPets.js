@@ -11,8 +11,8 @@ function BlockPets(props) {
     const [Filter, setFilter] = useState(filter);
     const [isOpen, Open] = useState(false);
     const [petsId, setPetsId] = useState(false);
+
     useEffect(() => {
-        console.log(filter)
         update(false);
         fetch("/Pets", {method: "GET"})
         .then(resp => resp.json())
@@ -42,6 +42,15 @@ function BlockPets(props) {
             }
         })
     }, [props])
+
+    const UpdatePetsList = async () => {
+        await fetch("/pets", {method: "GET"})
+        .then(resp => resp.json())
+        .then(async res => {
+            await setPetsList(res);
+        })
+    }
+
     const OpenModal = (petsIdNow) => {
         setPetsId(petsIdNow);
         Open(true);
@@ -53,7 +62,7 @@ function BlockPets(props) {
             PetsList={PetsList}
             open={OpenModal}
         /> 
-        {isOpen && <FormApplication show={isOpen} setShow={Open} petsIdNow={petsId}/>}
+        {isOpen && <FormApplication show={isOpen} setShow={Open} petsIdNow={petsId} UpdatePetsList={UpdatePetsList}/>}
     </>
     :
     <div className="container" style={{display: "flex", flexDirection: "column"}}>
@@ -61,7 +70,7 @@ function BlockPets(props) {
             PetsList={PetsList}
             open={OpenModal}
         />
-        {isOpen && <FormApplication show={isOpen} setShow={Open} petsIdNow={petsId}/>}
+        {isOpen && <FormApplication show={isOpen} setShow={Open} petsIdNow={petsId} UpdatePetsList={UpdatePetsList}/>}
     </div> 
 }
 

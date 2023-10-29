@@ -4,7 +4,7 @@ import FormApplicationMobile from "./FormApplicationMobile";
 import { useMediaQuery } from 'react-responsive'
 
 
-function FormApplication({show, setShow, petsIdNow}) {
+function FormApplication({show, setShow, petsIdNow, UpdatePetsList}) {
     const isMobile = useMediaQuery({ query: '(max-width: 750px)' });
     const [FullName, setFullName] = useState(); 
     const [DateBirth, setDateBirth] = useState(); 
@@ -22,13 +22,17 @@ function FormApplication({show, setShow, petsIdNow}) {
         })
     }, [])
 
-    const SendFormApplication = () => {
+    const SendFormApplication = async () => {
+        localStorage.setItem("NameUser", FullName)
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({full_name: FullName, dateBirth: DateBirth, phone: phone,address: address, petsId:petsId})
         };
-        fetch("/application/",requestOptions);
+        await fetch("/application/",requestOptions)
+        .then( async () => await UpdatePetsList())
+        .finally( async () => await UpdatePetsList())
+        await UpdatePetsList()
     }
 
     return isMobile === true? 

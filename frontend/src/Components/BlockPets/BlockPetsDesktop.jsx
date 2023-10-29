@@ -51,7 +51,7 @@ const SmallP = styled.p`
 function BlockPetsDesktop({PetsList, open}) {
     return(
     <div className="container" style={{display:"flex", justifyContent:"space-around"}}>
-        <Container style={{marginTop:"3vw"}}> 
+        <Container style={{marginTop:"3vw", flexWrap: "wrap"}}> 
             {PetsList?.map((el, key) => {
                 return (
                     

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import '../../App.css';
 
@@ -60,6 +60,20 @@ const Select = styled.select`
 `
 
 function TasksDesktop({full_name, dateBirth,phone,address, petsId, petsList, Changefull_name, ChangedateBirth,Changephone,Changeaddress, ChangepetsId, func, setShow, Show}) {
+    useEffect(() => {
+        if(localStorage.getItem("NameUser")){
+            fetch("/UserByFullName/" + localStorage.getItem("NameUser"), {method: "GET"})
+            .then(resp => resp.json())
+            .then(res => {
+                Changefull_name(res[0].full_name);
+                let NewDate = new Date(res[0].date_of_birth);
+                NewDate.setDate(NewDate.getDate() + 1);
+                ChangedateBirth(NewDate.toISOString().split('T')[0]);
+                Changephone(res[0].phone_number);
+                Changeaddress(res[0].address)
+            })
+        }
+    }, [])
     return(
         <Modal show={Show}> 
             <ModalContent>

@@ -31,7 +31,7 @@ function Adopt() {
         .then(res => {
             let newArray = [];
             res.map(el => {
-                newArray.push(el.breed)
+                if(!newArray.includes(el.breed)) newArray.push(el.breed)
             }) 
             setBreedList(newArray)
         })
